@@ -12,4 +12,10 @@ class Category extends Model
     protected $fillable = [
         'description'
     ];
+
+    // relation with users
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }

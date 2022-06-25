@@ -15,4 +15,10 @@ class Post extends Model
         'photo',
         'user_id'
     ];
+
+    // relation with users
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
