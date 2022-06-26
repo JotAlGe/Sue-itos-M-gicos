@@ -888,14 +888,14 @@ a:hover {
   margin: -5px 0 0 15px;
 }
 
-.error {
+/* .error {
   display: none;
   padding: 10px;
   color: #D8000C;
   border-radius: 4px;
   font-size: 13px;
   background-color: #FFBABA;
-}
+} */
 
 .success {
   background-color: #6cb670;

@@ -42,41 +42,7 @@
 
                 <!-- Contact Form -->
                 <div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <form id="contact-form" method="post" action="sendmail.php" role="form">
-
-                        <div class="form-group">
-                            <input type="text" placeholder="Tu nombre..." class="form-control" name="name"
-                                id="name">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" placeholder="Tu Email..." class="form-control" name="email"
-                                id="email">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" placeholder="Asunto..." class="form-control" name="subject"
-                                id="subject">
-                        </div>
-
-                        <div class="form-group">
-                            <textarea rows="6" placeholder="Mensaje..." class="form-control" name="message"
-                                id="message"></textarea>
-                        </div>
-
-                        <div id="mail-success" class="success">
-                            Thank you. The Mailman is on His Way :)
-                        </div>
-
-                        <div id="mail-fail" class="error">
-                            Sorry, don't know what happened. Try later :(
-                        </div>
-
-                        <div id="cf-submit">
-                            <input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar">
-                        </div>
-
-                    </form>
+                    @livewire('message')
                 </div>
                 <!-- ./End Contact Form -->
 
@@ -85,3 +51,4 @@
 
     </section> <!-- end section -->
 </div>
+@livewireScripts

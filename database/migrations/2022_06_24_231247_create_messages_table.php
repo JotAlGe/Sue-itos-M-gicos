@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('subject', 100);
             $table->text('message');
 
-            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }

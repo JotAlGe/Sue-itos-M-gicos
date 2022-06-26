@@ -19,6 +19,6 @@ class Message extends Model
     // relation with users
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->withDefault();
     }
 }
