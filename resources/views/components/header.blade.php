@@ -13,7 +13,8 @@
 
                 <!-- logo -->
                 <a class="navbar-brand logo" href="#body">
-                    <img src="{{ asset('asets/images/logo_sm.png') }}" alt="Logo de sueñitos mágicos" style="max-width: 50px;" />
+                    <img src="{{ asset('asets/images/logo_sm.png') }}" alt="Logo de sueñitos mágicos"
+                        style="max-width: 50px;" />
                 </a>
                 <!-- /logo -->
             </div>
@@ -29,6 +30,15 @@
                     <li><a data-scroll href="#our-team">Fundadora</a></li>
                     <!--<li><a data-scroll href="#blog">Blog</a></li> -->
                     <li><a data-scroll href="#contact-us">Contacto</a></li>
+
+                    @auth
+                    <li>
+                        <form id="contact-form" role="form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <input type="submit" value="Logout" class="btn btn-transparent">
+                        </form>
+                    </li>
+                    @endauth
                 </ul>
             </nav>
 
