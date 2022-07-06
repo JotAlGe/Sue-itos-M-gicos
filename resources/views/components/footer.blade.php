@@ -23,8 +23,9 @@
 
                     <!-- copyright -->
                     <div class="copyright text-center">
-                        <a href="index.html">
-                            <img src=" {{ asset('asets/images/logo_sm.png') }} " alt="Logo de sueñitos mágicos" style="height: 50px;" />
+                        <a href="{{ route('welcome') }}">
+                            <img src=" {{ asset('asets/images/logo_sm.png') }} " alt="Logo de sueñitos mágicos"
+                                style="height: 50px;" />
                         </a>
                         <br />
 

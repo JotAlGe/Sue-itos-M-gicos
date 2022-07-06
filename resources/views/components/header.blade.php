@@ -12,7 +12,7 @@
                 <!-- /responsive nav button -->
 
                 <!-- logo -->
-                <a class="navbar-brand logo" href="#body">
+                <a class="navbar-brand logo" href="{{ route('welcome') }}">
                     <img src="{{ asset('asets/images/logo_sm.png') }}" alt="Logo de sueñitos mágicos"
                         style="max-width: 50px;" />
                 </a>
