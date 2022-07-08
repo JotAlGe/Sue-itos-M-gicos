@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-
+                        @livewire('posts.create')
                     </div>
 
                 </div>

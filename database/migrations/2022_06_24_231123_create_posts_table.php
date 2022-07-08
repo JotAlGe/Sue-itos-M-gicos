@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('photo');
 
             $table->foreignId('user_id')
+                ->nullable()
                 ->constrained();
 
             $table->timestamps();
