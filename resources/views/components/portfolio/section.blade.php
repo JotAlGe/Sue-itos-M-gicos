@@ -18,137 +18,20 @@
                         <button type="button" data-filter="photography">Fotografías</button>
                         <button type="button" data-filter="design">Diseño</button>
                         <button type="button" data-filter="development">Exclusividad</button>
+
+                        @auth
+                        <button type="button" data-filter="development">
+                            <a href="{{ route('home') }}" style="color: #57cbcc;">Publicar otro trabajo
+                            </a>
+                        </button>
+                        @endauth
                     </div>
                 </div>
             </div>
             <div class="row filtr-container">
-                <div class="col-lg-4 filtr-item" data-category="development">
-                    <div class="portfolio-block">
-                        <img class="img-responsive" src=" {{ asset('asets/images/portfolio/2.jpg') }} "
-                            alt="Imagen de producto de porcelana fría" style="max-height: 263px;">
-                        <div class="caption">
-                            <a class="search-icon image-popup" data-effect="mfp-with-zoom"
-                                href=" {{ asset('asets/images/portfolio/2.jpg') }} " data-lightbox="image-1">
-                                <i class="tf-ion-android-search"></i>
-                            </a>
-                            <h4><a href="">Tag Design</a></h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="filtr-item col-md-4" data-category="design">
-                    <div class="portfolio-block">
-                        <img class="img-responsive" src="{{ asset('asets/images/portfolio/3.jpg') }}"
-                            alt="Imagen de producto de porcelana fría"
-                            style="max-height: 263px; object-fit: cover;">
-                        <div class="caption">
-                            <a class="search-icon image-popup" data-effect="mfp-with-zoom"
-                                href="{{ asset('asets/images/portfolio/3.jpg') }}" data-lightbox="image-1">
-                                <i class="tf-ion-android-search"></i>
-                            </a>
-                            <h4><a href="">Sound system</a></h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="filtr-item col-md-4" data-category="design, development">
-                    <div class="portfolio-block">
-                        <img class="img-responsive" src=" {{ asset('asets/images/portfolio/4.jpg') }} "
-                            alt="Imagen de producto de porcelana fría" style="max-height: 263px;">
-                        <div class="caption">
-                            <a class="search-icon image-popup" data-effect="mfp-with-zoom"
-                                href=" {{ asset('asets/images/portfolio/4.jpg') }} " data-lightbox="image-1">
-                                <i class="tf-ion-android-search"></i>
-                            </a>
-                            <h4><a href="">Clock Product</a></h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="filtr-item col-md-4" data-category="photography, development">
-                    <div class="portfolio-block">
-                        <img class="img-responsive" src=" {{ asset('asets/images/portfolio/6.jpg') }} "
-                            alt="Imagen de producto de porcelana fría" style="height: 263px; object-fit: cover;">
-                        <div class="caption">
-                            <a class="search-icon image-popup" data-effect="mfp-with-zoom"
-                                href=" {{ asset('asets/images/portfolio/6.jpg') }} " data-lightbox="image-1">
-                                <i class="tf-ion-android-search"></i>
-                            </a>
-                            <h4><a href="">Bottol Label</a></h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="filtr-item col-md-4" data-category="design">
-                    <div class="portfolio-block">
-                        <img class="img-responsive" src=" {{ asset('asets/images/portfolio/5.jpg') }} "
-                            alt="Imagen de producto de porcelana fría" style="height: 263px; object-fit: cover;">
-                        <div class="caption">
-                            <a class="search-icon image-popup" data-effect="mfp-with-zoom"
-                                href=" {{ asset('asets/images/portfolio/5.jpg') }} " data-lightbox="image-1">
-                                <i class="tf-ion-android-search"></i>
-                            </a>
-                            <h4><a href="">Shopping Bag</a></h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="filtr-item col-md-4" data-category="photography">
-                    <div class="portfolio-block">
-                        <img class="img-responsive" src=" {{ asset('asets/images/portfolio/8.jpg') }} "
-                            alt="Imagen de producto de porcelana fría" style="height: 263px; object-fit: cover;">
-                        <div class="caption">
-                            <a class="search-icon image-popup" data-effect="mfp-with-zoom"
-                                href=" {{ asset('asets/images/portfolio/8.jpg') }} " data-lightbox="image-1">
-                                <i class="tf-ion-android-search"></i>
-                            </a>
-                            <h4><a href="">Tag Design</a></h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="filtr-item col-md-4" data-category="design">
-                    <div class="portfolio-block">
-                        <img class="img-responsive" src=" {{ asset('asets/images/portfolio/9.jpg') }} "
-                            alt="Imagen de producto de porcelana fría" style="height: 263px; object-fit: cover;">
-                        <div class="caption">
-                            <a class="search-icon image-popup" data-effect="mfp-with-zoom"
-                                href=" {{ asset('asets/images/portfolio/9.jpg') }} " data-lightbox="image-1">
-                                <i class="tf-ion-android-search"></i>
-                            </a>
-                            <h4><a href="">Business Card</a></h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="filtr-item col-md-4" data-category="design">
-                    <div class="portfolio-block">
-                        <img class="img-responsive" src=" {{ asset('asets/images/portfolio/10.jpg') }} "
-                            alt="Imagen de producto de porcelana fría" style="height: 263px; object-fit: cover;">
-                        <div class="caption">
-                            <a class="search-icon image-popup" data-effect="mfp-with-zoom"
-                                href=" {{ asset('asets/images/portfolio/10.jpg') }} " data-lightbox="image-1">
-                                <i class="tf-ion-android-search"></i>
-                            </a>
-                            <h4><a href="">Stationary Design</a></h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="filtr-item col-md-4" data-category="photography, development">
-                    <div class="portfolio-block">
-                        <img class="img-responsive" src=" {{ asset('asets/images/portfolio/11.jpg') }} "
-                            alt="Imagen de producto de porcelana fría" style="height: 263px; object-fit: cover;">
-                        <div class="caption">
-                            <a class="search-icon image-popup" data-effect="mfp-with-zoom"
-                                href=" {{ asset('asets/images/portfolio/11.jpg') }} " data-lightbox="image-1">
-                                <i class="tf-ion-android-search"></i>
-                            </a>
-                            <h4><a href="">Tag Design</a></h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!</p>
-                        </div>
-                    </div>
-                </div>
+                {{-- jobs --}}
+                @livewire('posts.index')
+
             </div>
         </div> <!-- end container -->
     </section> <!-- End section -->

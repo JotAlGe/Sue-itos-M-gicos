@@ -43,7 +43,7 @@ class Create extends Component
         Post::create([
             'title' => $this->title,
             'text' => $this->text,
-            'photo' => $this->photo->store('posts', 'public'),
+            'photo' => 'storage/' . $this->photo->store('posts', 'public'),
             'user_id' => auth()->user()->id
         ]);
 

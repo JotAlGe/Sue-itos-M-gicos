@@ -34,6 +34,7 @@
         @if(session()->has('success'))
         <div style=" color: #57cbcc;" class="text-center">
             <strong>{{ session('success') }}</strong>
+            <a href="{{ route('welcome').'/#portfolio' }}"> Ver trabajos posteados</a>
         </div>
         @endif
 
@@ -41,7 +42,8 @@
 
 
         <div id="cf-submit">
-            <input type="button" id="contact-submit" class="btn btn-transparent" value="Publicar" wire:click="store">
+            <input type="button" id="contact-submit" class="btn btn-transparent" value="Publicar" wire:click="store"
+                wire:loading.attr="disabled">
 
         </div>
     </form>

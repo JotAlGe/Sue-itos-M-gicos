@@ -22,14 +22,14 @@
             <!-- main nav -->
             <nav class="collapse navbar-collapse navbar-right" role="Navigation">
                 <ul id="nav" class="nav navbar-nav navigation-menu">
-                    <li><a data-scroll href="#body">Inicio</a></li>
-                    <li><a data-scroll href="#about">Sobre nosotros</a></li>
+                    <li><a data-scroll href="{{route('welcome') . '/#body'}}">Inicio</a></li>
+                    <li><a data-scroll href="{{ route('welcome') .'/#about'}}">Sobre nosotros</a></li>
                     <!-- <li><a data-scroll href="#services">Servicios</a></li> -->
-                    <li><a data-scroll href="#portfolio">Portafolio</a></li>
+                    <li><a data-scroll href="{{ route('welcome').'/#portfolio' }}">Portafolio</a></li>
                     {{-- <li><a data-scroll href="#counter">Redes</a></li> --}}
-                    <li><a data-scroll href="#our-team">Fundadora</a></li>
+                    <li><a data-scroll href="{{route('welcome') .'/#our-team'}}">Fundadora</a></li>
                     <!--<li><a data-scroll href="#blog">Blog</a></li> -->
-                    <li><a data-scroll href="#contact-us">Contacto</a></li>
+                    <li><a data-scroll href="{{route('welcome') . '/#contact-us'}}">Contacto</a></li>
 
                     @auth
                     <li>
