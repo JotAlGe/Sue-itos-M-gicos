@@ -20,4 +20,7 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
     Route::view('home', 'admin.home')->name('home');
+    Route::resource('messages', MessageController::class)->only([
+        'index', 'destroy', 'show'
+    ])->names('messages');
 });

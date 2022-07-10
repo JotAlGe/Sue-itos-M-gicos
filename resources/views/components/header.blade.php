@@ -32,6 +32,7 @@
                     <li><a data-scroll href="{{route('welcome') . '/#contact-us'}}">Contacto</a></li>
 
                     @auth
+                    <li><a data-scroll href="{{ route('messages.index') }}">Mensajes</a></li>
                     <li>
                         <form id="contact-form" role="form" action="{{ route('logout') }}" method="POST">
                             @csrf
