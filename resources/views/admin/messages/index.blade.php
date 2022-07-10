@@ -43,7 +43,8 @@
                                     <td>
                                         {{ $message->id }}
                                     </td>
-                                    <td><a href="{{route('messages.show', $message->id)}}">{{$message->name_mess}}</a>
+                                    <td>
+                                        <a href="{{route('messages.show', $message)}}">{{$message->name_mess}}</a>
                                     </td>
                                     <td>{{ $message->subject }}</td>
                                     <td>{{ $message->email_mess }}</td>

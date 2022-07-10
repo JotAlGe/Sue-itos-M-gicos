@@ -13,8 +13,14 @@ class Message extends Model
         'name_mess',
         'email_mess',
         'subject',
-        'message'
+        'message',
+        'slug'
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
     // relation with users
     public function user()

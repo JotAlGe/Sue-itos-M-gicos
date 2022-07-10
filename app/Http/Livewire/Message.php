@@ -6,6 +6,7 @@ use App\Mail\MessageSent;
 use App\Models\Message as ModelsMessage;
 use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class Message extends Component
 {
@@ -13,6 +14,7 @@ class Message extends Component
     public $email_mess;
     public $subject;
     public $message;
+    public $slug;
 
     protected $rules = [
         'name_mess' => ['required', 'min:3'],
@@ -40,15 +42,23 @@ class Message extends Component
 
     public function store()
     {
-        ModelsMessage::create($this->validate());
-        //email 
+        ModelsMessage::create([
+            'name_mess' => $this->validate()['name_mess'],
+            'email_mess' => $this->validate()['email_mess'],
+            'subject' => $this->validate()['subject'],
+            'message' => $this->validate()['message'],
+            'slug' => Str::slug($this->validate()['message'], '-') . '-' . Str::random(5)
+        ]);
+        //ModelsMessage::create($this->validate());
+        //email
         Mail::to('juanchismo10@gmail.com')->send(new MessageSent($this->validate()));
 
         $this->reset([
             'name_mess',
             'email_mess',
             'subject',
-            'message'
+            'message',
+            'slug'
         ]);
         session()->flash('success', '¡Mensaje enviado!.');
     }

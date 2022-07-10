@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email_mess');
             $table->string('subject', 100);
             $table->text('message');
+            $table->string('slug');
 
             $table->timestamps();
         });
